@@ -1,0 +1,612 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("./Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("./Satoshi-VariableItalic.woff2") format("woff2");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("./aileron-semibold-webfont.woff2") format("woff2"),
+    url("aileron-semibold-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  color: #ffffff;
+  background-color: #04020e;
+  font-family: "Aileron";
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  padding: 0%;
+  margin: 0%;
+  background-image: url("/img/SRC-20222023-BG.jpg");
+  background-size: 120vw;
+  background-repeat: none;
+  position: relative;
+  animation-name: opacity;
+  animation-duration: 3s;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+/*2023/2022 SRC**/
+h6 {
+  font-family: "Satoshi";
+  font-size: 5.9rem;
+  text-align: center;
+  line-height: 6rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: absolute;
+  top: 35%;
+}
+
+span.bold {
+  font-weight: 900;
+  font-size: 7rem;
+  line-height: 8rem;
+}
+
+h6 {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  transition: all 1s;
+}
+
+span.underline {
+  text-decoration: none;
+
+  background: linear-gradient(to right, #35353500, #35353500),
+    linear-gradient(to right, #e7bb18, #cd152b, #04020e);
+  background-size: 100% 6px, 0 6px;
+  background-position: 100% 100%, 0 95%;
+  background-repeat: no-repeat;
+  transition: background-size 600ms;
+}
+
+span.underline:hover {
+  background-size: 0 6px, 100% 6px;
+  cursor: pointer;
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(+150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.left2 {
+  width: 35%;
+  float: left;
+  position: relative;
+}
+
+.right2 {
+  width: 65%;
+  float: right;
+}
+
+p.newlecture {
+  font-family: "Aileron";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-left: 100px;
+  margin-top: 25vh;
+  margin-left: 50px;
+  margin-right: 100px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.anco2 {
+  font-family: "Satoshi";
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-left: 175px;
+  margin-top: 40px;
+  margin-right: 0px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-align: left;
+}
+
+.italic {
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+
+.chair-img {
+  width: 30vw;
+  height: auto;
+  margin-left: 10%;
+  margin-top: 30%;
+  border-radius: 60vw;
+}
+
+.intro {
+  background-color: #04020e;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*gallery*/
+
+/*SRC Gallery*/
+
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.media-scroller {
+  --_spacer: 15px;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 18%;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  background-color: #04020e00;
+}
+
+.media-scroller--with-groups {
+  grid-auto-columns: 80%;
+}
+
+.media-group {
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+}
+
+.media-element {
+  display: grid;
+
+  gap: 10px;
+  background: #222222;
+  border-radius: 3px;
+  box-shadow: var(--shadow-2);
+  height: 350px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.media-element:hover {
+  display: grid;
+  background: #cd152b;
+  border-radius: 3px;
+  box-shadow: var(--shadow-2);
+  height: 350px;
+}
+
+.media-scroller {
+  --_spacer: 15px;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: %;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  background-color: #04020e00;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  float: bottom;
+  border-radius: 3px;
+  transition: 0.25s ease-out;
+}
+
+.media-element:hover img {
+  inline-size: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  float: bottom;
+  border-radius: 3px;
+}
+
+h4 {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-size: 7rem;
+  padding-top: 10rem;
+  padding-bottom: 3.5rem;
+  padding-left: 15px;
+  mix-blend-mode: exclusion;
+}
+
+p.title {
+  font-family: "Aileron";
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+p.title2 {
+  font-family: "Aileron";
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/*mobile*/
+
+@media screen and (max-width: 768px) {
+  h6 {
+    font-family: "Satoshi";
+    font-size: 5.9rem;
+    text-align: center;
+    line-height: 6rem;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    position: absolute;
+    top: 35%;
+  }
+
+  div.section {
+    height: 100vh;
+    width: 100%;
+    background-color: #04020e;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    font-size: 40%;
+  }
+  .media-scroller {
+    --_spacer: 15px;
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: row;
+    grid-auto-columns: 80%;
+
+    padding: 0;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .media-scroller--with-groups {
+    grid-auto-columns: 80%;
+  }
+
+  p.title {
+    font-family: "Satoshi";
+    font-size: 4.5rem;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+
+  p.title2 {
+    font-family: "Aileron";
+    font-size: 3rem;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .section {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    padding: 0%;
+    margin: 0%;
+    background-image: url("/img/SRC-20222023-BG-mobile.jpg");
+    background-size: 150vw;
+    background-repeat: none;
+    position: relative;
+    animation-name: opacity;
+    animation-duration: 3s;
+  }
+
+  h4.centre {
+    padding-top: 30px;
+    text-align: center;
+    margin-top: 0px;
+    padding-left: 0%;
+    padding-bottom: 10px;
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .media-element {
+    display: grid;
+    gap: 10px;
+    background: rgb(4, 2, 14);
+    background: linear-gradient(
+      180deg,
+      rgba(4, 2, 14, 1) 52%,
+      rgba(205, 21, 43, 1) 100%
+    );
+    border-radius: 3px;
+    box-shadow: var(--shadow-2);
+    height: 425px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  .media-element:hover {
+    display: grid;
+    gap: 10px;
+    background: rgb(4, 2, 14);
+    background: linear-gradient(
+      180deg,
+      rgba(4, 2, 14, 1) 52%,
+      rgba(205, 21, 43, 1) 100%
+    );
+    border-radius: 3px;
+    box-shadow: var(--shadow-2);
+    height: 425px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  .media-element > img {
+    inline-size: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: center;
+    float: bottom;
+    border-radius: 3px;
+    transition: 0.2s ease-out;
+  }
+
+  .media-element:hover img {
+    inline-size: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: center;
+    float: bottom;
+    border-radius: 3px;
+  }
+
+  .anco2 {
+    font-family: "Satoshi";
+    font-weight: 600;
+    font-size: 3.2rem;
+    font-weight: 35px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  p.newlecture {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .italic {
+    font-style: italic;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .red {
+    text-align: left;
+  }
+
+  .chair-img {
+    width: 50vw;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .intro {
+    background-color: #04020e;
+    width: 100%;
+    height: 60%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gallery {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 1px;
+    margin: 0;
+  }
+
+  .left2 {
+    width: 100%;
+    float: top;
+    position: relative;
+  }
+
+  .right2 {
+    width: 100%;
+    float: bottom;
+  }
+
+  .gallery {
+    background-color: #04020e;
+    background-image: url("./img/Clubs-BG.svg");
+    background-size: 110vw;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  .footer {
+    position: relative;
+    top: calc(375px * 13);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80%;
+    overflow-x: hidden;
+    color: #ffffff;
+    background-color: #04020e;
+    font-family: "Aileron";
+  }
+
+  p.newlecture {
+    font-family: "Aileron";
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-left: 100px;
+    margin-top: 30vh;
+    margin-left: 65px;
+    margin-right: 100px;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .media-scroller {
+    --_spacer: 15px;
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 18%;
+
+    padding: 0 var(--_spacer) var(--_spacer);
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    background-color: #04020e00;
+  }
+
+  .media-scroller--with-groups {
+    grid-auto-columns: 80%;
+  }
+
+  .media-group {
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+  }
+
+  .media-element {
+    display: grid;
+
+    gap: 8px;
+    background: rgb(4, 2, 14);
+    background: linear-gradient(
+      180deg,
+      rgba(4, 2, 14, 1) 69%,
+      rgba(205, 21, 43, 1) 100%
+    );
+    border-radius: 3px;
+    box-shadow: var(--shadow-2);
+    height: 60vh;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  .media-element:hover {
+    display: grid;
+    background: rgb(4, 2, 14);
+    background: linear-gradient(
+      180deg,
+      rgba(4, 2, 14, 1) 69%,
+      rgba(205, 21, 43, 1) 100%
+    );
+    border-radius: 3px;
+    box-shadow: var(--shadow-2);
+    height: 60vh;
+  }
+
+  .media-element > img {
+    inline-size: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    float: bottom;
+    border-radius: 3px;
+    transition: 0.25s ease-out;
+  }
+
+  .media-element:hover img {
+    inline-size: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    float: bottom;
+    border-radius: 3px;
+  }
+
+  p.title {
+    font-family: "Aileron";
+    font-size: 2.8rem;
+    font-weight: 600;
+    padding-left: 10px;
+  }
+
+  p.title2 {
+    font-family: "Aileron";
+    font-size: 2rem;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
